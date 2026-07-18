@@ -6,17 +6,20 @@ import java.sql.SQLException;
 
 public class DBUtil {
     // These blocks check the cloud environment first. If empty, they use your local laptop settings.
-    private static final String URL = System.getenv("DB_URL") != null 
-            ? System.getenv("DB_URL") 
-            : "jdbc:mysql://localhost:3306/fitness_db";
-            
-    private static final String USERNAME = System.getenv("DB_USER") != null 
-            ? System.getenv("DB_USER") 
-            : "root";
-            
-    private static final String PASSWORD = System.getenv("DB_PASSWORD") != null 
-            ? System.getenv("DB_PASSWORD") 
-            : "tiger";
+	private static final String URL =
+	        (System.getenv("DB_URL") == null || System.getenv("DB_URL").trim().isEmpty())
+	                ? "jdbc:mysql://localhost:3306/fitness_db"
+	                : System.getenv("DB_URL");
+
+	private static final String USERNAME =
+	        (System.getenv("DB_USER") == null || System.getenv("DB_USER").trim().isEmpty())
+	                ? "root"
+	                : System.getenv("DB_USER");
+
+	private static final String PASSWORD =
+	        (System.getenv("DB_PASSWORD") == null || System.getenv("DB_PASSWORD").trim().isEmpty())
+	                ? "tiger"
+	                : System.getenv("DB_PASSWORD");
     
     static {
         try {
