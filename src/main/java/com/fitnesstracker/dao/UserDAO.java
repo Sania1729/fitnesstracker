@@ -21,6 +21,10 @@ public class UserDAO {
             
             return pstmt.executeUpdate() > 0;
         } catch (SQLException e) {
+            System.out.println("========== DATABASE ERROR ==========");
+            System.out.println("Message: " + e.getMessage());
+            System.out.println("SQLState: " + e.getSQLState());
+            System.out.println("ErrorCode: " + e.getErrorCode());
             e.printStackTrace();
             return false;
         }

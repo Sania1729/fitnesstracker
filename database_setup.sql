@@ -5,8 +5,8 @@
 -- for the Fitness Tracker application with sample data
 
 ---- Create Database
---CREATE DATABASE IF NOT EXISTS fitness_db;
---USE fitness_db;
+-- CREATE DATABASE IF NOT EXISTS fitness_db;
+-- USE fitness_db;
 
 -- =====================================================
 -- Table Structures
