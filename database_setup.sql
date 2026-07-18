@@ -4,9 +4,9 @@
 -- This script creates the complete database structure
 -- for the Fitness Tracker application with sample data
 
--- Create Database
-CREATE DATABASE IF NOT EXISTS fitness_db;
-USE fitness_db;
+---- Create Database
+--CREATE DATABASE IF NOT EXISTS fitness_db;
+--USE fitness_db;
 
 -- =====================================================
 -- Table Structures
