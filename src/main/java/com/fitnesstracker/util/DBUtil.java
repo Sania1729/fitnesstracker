@@ -27,7 +27,16 @@ public class DBUtil {
     }
     
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USERNAME, PASSWORD);
+
+        System.out.println("DB_URL      = " + URL);
+        System.out.println("DB_USER     = " + USERNAME);
+        System.out.println("DB_PASSWORD = " + (PASSWORD == null ? "null" : "********"));
+
+        Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+
+        System.out.println("Database Connected Successfully!");
+
+        return conn;
     }
     
     public static void closeConnection(Connection conn) {
